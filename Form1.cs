@@ -26,9 +26,10 @@ namespace Activity_14
         {
             FillButton.Checked = true;
         }
-
+        //Event handler for draw click
         private void DrawButton_Click(object sender, EventArgs e)
         {
+            //Make all images false so they are not visibleand labels empty 
             TriangleOutImage.Visible = false;
             TriangleFillImage.Visible = false;
             SquareOutImage.Visible = false;
@@ -38,11 +39,14 @@ namespace Activity_14
             SidesLabel.Text = " ";
             NamesLabel.Text = " ";
 
+            //Check user listbox selection
             if (ShapeListBox.SelectedItems.Count != -1) {
+                //Assign listbox selection to selectedShape
                 string selectedShape = ShapeListBox.SelectedItem.ToString();
 
                 if (selectedShape.Equals("Triangle"))
                 {
+                    //Check radio button selection
                     if (FillButton.Checked)
                     {
                         TriangleFillImage.Visible = true;
@@ -52,7 +56,7 @@ namespace Activity_14
                         TriangleFillImage.Visible = false;
                         TriangleOutImage.Visible = true;
                     }
-
+                    //Check checkbox to see which is selected
                     if (SidesCheckbox.Checked)
                     {
                         SidesLabel.Text = "Three Sides";
@@ -111,12 +115,13 @@ namespace Activity_14
                 }
 
                 }
+            //Notify user to select shape before clicking Draw
             else {
                 MessageBox.Show("Select a Shape");
             }
 
         }
-
+        //Closes form
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
