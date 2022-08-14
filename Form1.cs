@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+/* Enrique Sanchezmurillo
+ * CST150 Activity 14
+ * 14 AUG 2022
+ */
 namespace Activity_14
 {
     public partial class Form1 : Form
